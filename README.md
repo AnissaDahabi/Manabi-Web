@@ -19,9 +19,9 @@ Application web PHP permettant aux élèves de consulter et réserver des cours 
 
 | Composant | Technologie |
 |-----------|-------------|
+| Frontend | HTML / CSS |
 | Backend | PHP |
 | Architecture | MVC (Model / View / Controller) |
 | Base de données | MySQL / phpMyAdmin |
 | Accès BDD | PDO avec requêtes préparées |
-| Frontend | HTML / CSS |
 | Serveur | Apache (XAMPP en local / AlwaysData en prod) |

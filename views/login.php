@@ -4,8 +4,8 @@
 </head>
 <body>
 <div class="login-container">
-    <h2>Connexion</h2
-    <form action="controllers/login_controller.php" method="POST">
+    <h2>Connexion</h2>
+    <form action="../controllers/login_controller.php" method="POST">
         <div>
             <label>Email:</label>
             <input type="text" name="email">
@@ -17,6 +17,9 @@
         <div>
             <input type="submit" value="Connexion">
         </div>
+        <?php if(!empty($error)) { ?>
+            <p style="color:red;"><?php echo $error; ?></p>
+        <?php } ?>
     </form>
 </div>
 </body>

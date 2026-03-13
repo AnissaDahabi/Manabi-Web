@@ -2,9 +2,27 @@
 
     <h2 class="page-titre">Cours disponibles</h2>
 
+    <form method="GET" action="index.php" class="recherche-wrapper">
+        <input type="hidden" name="page" value="cours">
+        <input
+                type="text"
+                name="recherche"
+                class="recherche-input"
+                placeholder="Rechercher un cours, un niveau, un professeur..."
+                value="<?= htmlspecialchars($recherche) ?>"
+        >
+        <button type="submit" class="btn-reserver">Rechercher</button>
+    </form>
+
+<?php if (!empty($recherche)) : ?>
+    <p style="font-size: 0.88rem; color: var(--couleur-muted); margin-bottom: 1rem;">
+        Résultats pour : <strong><?= htmlspecialchars($recherche) ?></strong>
+    </p>
+<?php endif; ?>
+
 <?php if (empty($cours)) : ?>
 
-    <p>Aucun cours disponible pour le moment.</p>
+    <p style="color: var(--couleur-muted);">Aucun cours ne correspond à votre recherche.</p>
 
 <?php else : ?>
 

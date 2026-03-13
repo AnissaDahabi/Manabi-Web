@@ -437,6 +437,31 @@ a:hover {
     border: 1px solid #c3e6c4;
 }
 
+/* BARRE DE RECHERCHE */
+.recherche-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.recherche-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--radius);
+    font-family: var(--font-corps);
+    font-size: 0.95rem;
+    background: var(--couleur-blanc);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.recherche-input:focus {
+    border-color: var(--couleur-principale);
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
 /* FOOTER */
 .footer {
     text-align: center;

@@ -38,6 +38,14 @@ La maquette de l'application est disponible sur Figma :
 
 ---
 
+## Démo en ligne
+
+L'application est déployée et accessible à l'adresse suivante :
+
+[manabi.alwaysdata.net](https://manabi.alwaysdata.net/)
+
+---
+
 ## Structure du projet
 
 ```
@@ -47,16 +55,16 @@ manabi-web/
 │   ├── database.php
 │   └── config.php
 ├── models/
-│   ├── User.php
-│   ├── Cours.php
-│   ├── Session.php
-│   └── Reservation.php
+│   ├── user.php
+│   ├── cours.php
+│   ├── session.php
+│   └── reservation.php
 ├── controllers/
-│   ├── LoginController.php
-│   ├── LogoutController.php
-│   ├── DashboardController.php
-│   ├── CoursController.php
-│   └── ReservationController.php
+│   ├── login_controller.php
+│   ├── logout_controller.php
+│   ├── dashboard_controller.php
+│   ├── cours_controller.php
+│   └── reservation_controller.php
 ├── views/
 │   ├── layout/
 │   │   ├── header.php
@@ -66,7 +74,9 @@ manabi-web/
 │   ├── cours_list.php
 │   ├── cours_detail.php
 │   └── reservations.php
-└── public/
+└── assets/
     └── css/
         └── style.css
+    └── images/
+        └── logo.png
 ```

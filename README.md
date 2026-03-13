@@ -2,7 +2,7 @@
 
 Application web PHP permettant aux élèves de consulter et réserver des cours de japonais.
 
-> Client léger du projet Manabi — le client lourd (desktop) est dédié aux administrateurs et professeurs.
+> Client léger du projet Manabi: le client lourd (desktop) est dédié aux administrateurs et professeurs.
 
 ---
 

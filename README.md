@@ -44,6 +44,13 @@ L'application est déployée et accessible à l'adresse suivante :
 
 [manabi.alwaysdata.net](https://manabi.alwaysdata.net/)
 
+Pour tester l'application, utilisez le compte élève suivant :
+ 
+| Champ | Valeur |
+|-------|--------|
+| Email | lucas.martin@gmail.com |
+| Mot de passe | eleve1234 |
+
 ---
 
 ## Structure du projet
@@ -75,8 +82,8 @@ manabi-web/
 │   ├── cours_detail.php
 │   └── reservations.php
 └── assets/
-    └── css/
-        └── style.css
+    ├── css/
+    │   └── style.css
     └── images/
         └── logo.png
 ```

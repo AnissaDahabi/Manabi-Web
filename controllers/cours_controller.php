@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../models/Cours.php';
-require_once __DIR__ . '/../models/Session.php';
+require_once __DIR__ . '/../models/cours.php';
+require_once __DIR__ . '/../models/session.php';
 
 if (!isset($_GET['id'])) {
 

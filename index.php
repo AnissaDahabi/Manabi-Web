@@ -2,17 +2,21 @@
 session_start();
 
 // Pages accessibles sans être connecté
-$pages_publiques = ['login', 'logout'];
+$pages_publiques = ['register', 'login', 'logout'];
 
 // Page demandée
-$page = isset($_GET['page']) ? $_GET['page'] : 'login';
+$page = isset($_GET['page']) ? $_GET['page'] : 'register';
 
 if (!isset($_SESSION['id_user']) && !in_array($page, $pages_publiques)) {
-    header('Location: index.php?page=login');
+    header('Location: index.php?page=register');
     exit;
 }
 
 switch ($page) {
+    case 'register':
+        require_once 'controllers/register_controller.php';
+        break;
+
     case 'login':
         require_once 'controllers/login_controller.php';
         break;

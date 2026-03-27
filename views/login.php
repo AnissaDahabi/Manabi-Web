@@ -9,12 +9,6 @@
                 <p>Connectez-vous à votre espace élève</p>
             </div>
 
-            <?php if ($erreur): ?>
-                <div class="alert alert-error">
-                    <?= htmlspecialchars($erreur) ?>
-                </div>
-            <?php endif; ?>
-
             <form method="POST" action="index.php?page=login">
 
                 <div class="form-group">
@@ -41,6 +35,10 @@
                 <button type="submit" class="btn-primary">Se connecter</button>
 
             </form>
+
+            <p style="text-align:center; margin-top:1rem; font-size:0.88rem; color:var(--couleur-muted);">
+                Pas de compte ? <a href="index.php?page=register">S'inscrire</a>
+            </p>
 
         </div>
     </div>

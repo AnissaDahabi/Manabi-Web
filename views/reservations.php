@@ -24,6 +24,7 @@
             <th>Début</th>
             <th>Fin</th>
             <th>Professeur</th>
+            <th>Statut</th>
         </tr>
         </thead>
         <tbody>
@@ -35,7 +36,11 @@
                 <td><?= substr($reservation['heure_debut'], 0, 5) ?></td>
                 <td><?= substr($reservation['heure_fin'], 0, 5) ?></td>
                 <td><?= $reservation['prenom'] . ' ' . $reservation['nom'] ?></td>
-            </tr>
+                <td>
+                    <span class="status-badge status-<?= str_replace(' ', '-', $reservation['statut']) ?>">
+                        <?= ucfirst($reservation['statut']) ?>
+                    </span>
+                </td>            </tr>
         <?php endforeach; ?>
         </tbody>
     </table>

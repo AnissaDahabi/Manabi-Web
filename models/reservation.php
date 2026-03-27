@@ -1,19 +1,25 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 
-function addReservation($id_eleve, $id_session){
+function addReservation($id_eleve, $id_session) {
     global $pdo;
+
     $stmt = $pdo->prepare("SELECT id FROM reservations WHERE eleve_id = :eleve_id AND session_id = :session_id");
-    $stmt->execute(array(':eleve_id' => $id_eleve, ':session_id' => $id_session));
+    $stmt->execute([':eleve_id' => $id_eleve, ':session_id' => $id_session]);
 
     if ($stmt->fetch()) {
-        return false;
+        return false; // Déjà réservé
     }
 
-    $stmt = $pdo->prepare("INSERT INTO reservations (eleve_id, session_id) VALUES (:eleve_id, :session_id)");
-    $stmt->execute(array(':eleve_id' => $id_eleve, ':session_id' => $id_session));
+    $stmt = $pdo->prepare("
+        INSERT INTO reservations (eleve_id, session_id, statut, date_reservation) 
+        VALUES (:eleve_id, :session_id, 'en attente', NOW())
+    ");
 
-    return true;
+    return $stmt->execute([
+        ':eleve_id'  => $id_eleve,
+        ':session_id' => $id_session
+    ]);
 }
 
 function getReservationsByEleve($id_eleve) {

@@ -461,6 +461,14 @@ a:hover {
     border-color: var(--couleur-principale);
     box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
 }
+/* Badges */
+.status-badge {
+    font-size: 0.85rem;
+}
+
+.status-annulée  { color: #C0392B; }
+.status-en-attente { color: #DD8923; }
+.status-confirmée { color: #529C15; }
 
 /* FOOTER */
 .footer {

@@ -27,6 +27,8 @@ Application web PHP permettant aux élèves de consulter et réserver des cours 
 | Base de données | MySQL / phpMyAdmin |
 | Accès BDD | PDO avec requêtes préparées |
 | Serveur | Apache (XAMPP en local / AlwaysData en prod) |
+| IDE | PyCharm |
+| Versionning | Git / GitHub |
 
 ---
 
